@@ -1,0 +1,66 @@
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px;
+}
+
+.link {
+    background: rgb(211, 225, 241);
+    border: 1.5px solid black;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.title {
+    text-align: center;
+    margin: 50px;
+}
+
+.details {
+    border: 1.5px solid black;
+    border-radius: 20px;
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.pipe {
+    margin: 10px;
+    font-size: larger;
+}
+
+.posts {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+
+.card {
+    box-sizing: border-box;
+    border: 1.5px solid black;
+    border-radius: 25px;
+    flex: 0 0 30%;
+    margin: calc(10% / 6);
+    text-align: center;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-basis: 100%;
+    }
+}

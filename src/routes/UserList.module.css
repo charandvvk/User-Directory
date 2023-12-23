@@ -1,0 +1,28 @@
+.title {
+    text-align: center;
+    margin: 50px;
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card {
+    margin: 25px;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    padding: 25px;
+    background: rgb(211, 225, 241);
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}

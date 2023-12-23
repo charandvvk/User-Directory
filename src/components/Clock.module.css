@@ -1,0 +1,28 @@
+.clock {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.dropdown {
+    font-size: inherit;
+}
+
+.time {
+    color: lightblue;
+    background: black;
+    padding: 5px 25px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.control {
+    background: rgb(188, 214, 172);
+    border: none;
+    font-size: inherit;
+    padding: 10px;
+}
+
+.control:hover {
+    cursor: pointer;
+}
