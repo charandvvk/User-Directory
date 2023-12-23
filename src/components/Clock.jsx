@@ -19,7 +19,7 @@ function Clock() {
     useEffect(() => {
         const fetchCountries = async () => {
             const response = await fetch(
-                "http://worldtimeapi.org/api/timezone"
+                "https://worldtimeapi.org/api/timezone"
             );
             const data = await response.json();
             setCountries(data);
@@ -31,7 +31,7 @@ function Clock() {
     useEffect(() => {
         const fetchTime = async () => {
             const response = await fetch(
-                `http://worldtimeapi.org/api/timezone/${selectedCountry}`
+                `https://worldtimeapi.org/api/timezone/${selectedCountry}`
             );
             const data = await response.json();
             const dateTime = new Date(data.datetime);
