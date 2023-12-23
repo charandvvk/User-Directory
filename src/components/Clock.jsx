@@ -19,7 +19,7 @@ function Clock() {
     useEffect(() => {
         const fetchCountries = async () => {
             const response = await fetch(
-                "https://worldtimeapi.org/api/timezone"
+                "http://worldtimeapi.org/api/timezone"
             );
             const data = await response.json();
             setCountries(data);
@@ -31,7 +31,7 @@ function Clock() {
     useEffect(() => {
         const fetchTime = async () => {
             const response = await fetch(
-                `https://worldtimeapi.org/api/timezone/${selectedCountry}`
+                `http://worldtimeapi.org/api/timezone/${selectedCountry}`
             );
             const data = await response.json();
             const dateTime = new Date(data.datetime);
@@ -45,13 +45,29 @@ function Clock() {
             };
             setTime(dateTime.toLocaleTimeString("en-US", options));
         };
+        fetchTime();
+    }, [selectedCountry]);
+
+    useEffect(() => {
         if (!isPaused) {
             const id = setInterval(() => {
-                fetchTime();
+                setTime((prevTime) => {
+                    const [hours, minutes, seconds] = prevTime
+                        .split(":")
+                        .map(Number);
+                    const newSeconds = (seconds + 1) % 60;
+                    const newMinutes =
+                        (minutes + Math.floor((seconds + 1) / 60)) % 60;
+                    const newHours =
+                        (hours + Math.floor((minutes + 1) / 60)) % 24;
+                    return `${String(newHours).padStart(2, "0")}:${String(
+                        newMinutes
+                    ).padStart(2, "0")}:${String(newSeconds).padStart(2, "0")}`;
+                });
             }, 1000);
             return () => clearInterval(id);
         }
-    }, [isPaused, selectedCountry]);
+    }, [isPaused]);
 
     return (
         <div className={classes.clock}>
