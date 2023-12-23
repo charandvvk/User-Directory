@@ -12,7 +12,6 @@
     margin: 25px;
     border: 1.5px solid black;
     border-radius: 10px;
-    padding: 25px;
     background: rgb(211, 225, 241);
 }
 
@@ -21,6 +20,7 @@
 }
 
 .link {
+    padding: 25px;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
