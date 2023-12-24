@@ -56,9 +56,9 @@ You can experience a live demo of the application [here](https://user-directory-
 
 ## Technologies
 
-- [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [JavaScript/ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [HTML5](https://html.com/)
+- [CSS3](https://css3.com/)
+- [JavaScript/ES6](https://www.javascript.com/)
 - [React Router](https://reactrouter.com/en/main)
 - [React](https://react.dev)
 
