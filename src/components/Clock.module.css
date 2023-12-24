@@ -23,6 +23,6 @@
     padding: 10px;
 }
 
-.control:hover {
+.control:hover, .dropdown:hover {
     cursor: pointer;
 }
