@@ -83,7 +83,7 @@ function Clock() {
             </select>
             <div className={classes.time}>{time}</div>
             <button className={classes.control} onClick={togglePause}>
-                Pause/Start
+                {isPaused ? "Start" : "Pause"}
             </button>
         </div>
     );
